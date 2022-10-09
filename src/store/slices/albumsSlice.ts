@@ -1,9 +1,9 @@
 import { PayloadAction, createSlice, createAction } from "@reduxjs/toolkit";
 
-import Album from "../../models/albumTypes";
+import IAlbum from "../../models/albumTypes";
 
 interface AlbumsSlice {
-  albums: Album[];
+  albums: IAlbum[];
 }
 
 const initialState: AlbumsSlice = {
@@ -14,7 +14,7 @@ const albumsSlice = createSlice({
   name: "albumsSlice",
   initialState,
   reducers: {
-    setAlbums: (state, { payload }: PayloadAction<Album[]>) => {
+    setAlbums: (state, { payload }: PayloadAction<IAlbum[]>) => {
       state.albums = payload;
     },
   },

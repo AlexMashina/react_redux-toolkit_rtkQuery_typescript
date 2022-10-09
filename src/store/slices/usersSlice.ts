@@ -1,10 +1,10 @@
 // src/store/user.js
 import { createSlice, PayloadAction, createAction } from "@reduxjs/toolkit";
 
-import User from "../../models/userTypes";
+import IUser from "../../models/userTypes";
 
 interface UsersSliceTypes {
-  users: Array<User>;
+  users: Array<IUser>;
 }
 
 // state
@@ -17,7 +17,7 @@ const userSlice = createSlice({
   name: "usersSlice",
   initialState,
   reducers: {
-    setUsers: (state, { payload }: PayloadAction<User[]>) => {
+    setUsers: (state, { payload }: PayloadAction<IUser[]>) => {
       state.users = payload;
     },
   },
