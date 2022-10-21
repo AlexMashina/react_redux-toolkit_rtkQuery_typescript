@@ -1,0 +1,19 @@
+.user {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  &__accordion-title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__accordion-body {
+    padding: 10px 10px 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+
+.saga {
+  min-height: calc(100vh - 80px);
+  margin-top: 100vh;
+  padding: 40px;
+  background-color: $dark-purple;
+  z-index: 2;
+
+  &__label {
+    display: block;
+    font-size: $middle-text;
+    color: $light-orange;
+    margin-bottom: 20px;
+  }
+
+  &__limit {
+    outline: none;
+    margin-left: 10px;
+    font-size: $middle-text;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__listData:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-more {
+    padding: 10px;
+    border: none;
+    font-size: $button-text;
+    color: $white;
+    background-color: $light-purple;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: $button-disabled;
+    }
+  }
+
+  &__album {
+    margin-bottom: 10px;
+  }
+}

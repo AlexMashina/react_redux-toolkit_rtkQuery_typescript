@@ -1,0 +1,79 @@
+@import "../../variables.scss";
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  &_tl {
+    border-width: 50px 50px 0 0;
+    border-color: $orange transparent transparent transparent;
+    animation: move_triangle_tl 2s linear infinite;
+  }
+
+  &_bl {
+    border-width: 50px 0 0 50px;
+    border-color: transparent transparent transparent $orange;
+    animation: move_triangle_bl 2s linear infinite;
+  }
+
+  &_tr {
+    border-width: 0 50px 50px 0;
+    border-color: transparent $orange transparent transparent;
+    animation: move_triangle_tr 2s linear infinite;
+  }
+
+  &_br {
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent $orange transparent;
+    animation: move_triangle_br 2s linear infinite;
+  }
+}
+
+@keyframes move_triangle_tl {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes move_triangle_bl {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes move_triangle_tr {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes move_triangle_br {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

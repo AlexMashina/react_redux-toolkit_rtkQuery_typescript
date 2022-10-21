@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+
+.data {
+  padding: 20px;
+  background-color: $white;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+}

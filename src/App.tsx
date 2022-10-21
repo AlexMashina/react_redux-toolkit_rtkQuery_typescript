@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+
+import { Header } from "./components/header/Header";
+import { SectionQuery } from "./components/sectionQuery/SectionQuery";
+import { SectionSaga } from "./components/sectionSaga/SectionSaga";
 import { useAppDispatch } from "./hooks/hooks";
 import { fetchAlbums } from "./store/slices/albumsSlice";
 import { fetchPosts } from "./store/slices/postsSlice";
@@ -9,14 +13,17 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchUsers());
-    dispatch(fetchPosts());
     dispatch(fetchAlbums());
-    console.log(fetchUsers());
-    console.log(fetchPosts());
-    console.log(fetchAlbums());
+    dispatch(fetchPosts());
   }, [dispatch]);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+      <SectionSaga />
+      <SectionQuery />
+    </div>
+  );
 }
 
 export default App;
