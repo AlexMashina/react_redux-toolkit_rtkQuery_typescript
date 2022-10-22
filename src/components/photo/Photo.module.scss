@@ -1,0 +1,10 @@
+.photo {
+  position: relative;
+  width: calc(33.3% - 10px);
+  display: flex;
+  padding: 5px;
+
+  &__image {
+    width: 100%;
+  }
+}

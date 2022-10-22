@@ -1,0 +1,75 @@
+@import "../../variables.scss";
+
+.todo {
+  position: relative;
+  display: block;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+
+  &__wrapper {
+    z-index: 4;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 50%;
+    background-color: $dark-purple;
+    z-index: -1;
+  }
+
+  &::before {
+    animation: leftBorderAnimate ease 5s infinite;
+    top: 0;
+    left: -3px;
+  }
+
+  &::after {
+    animation: rightBorderAnimate ease 5s infinite;
+    bottom: 0;
+    right: -3px;
+  }
+
+  &__completed {
+    background-color: $completed;
+    padding: 2px 3px;
+    border-radius: 3px;
+  }
+
+  &__uncompleted {
+    background-color: $uncomplited;
+    padding: 2px 3px;
+    border-radius: 3px;
+  }
+}
+
+@keyframes leftBorderAnimate {
+  0% {
+    top: 0px;
+    left: -3px;
+  }
+  50% {
+    top: calc(100% - 50%);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes rightBorderAnimate {
+  0% {
+    bottom: 0px;
+    right: -3px;
+  }
+  50% {
+    bottom: calc(100% - 50%);
+  }
+  100% {
+    bottom: 0;
+  }
+}

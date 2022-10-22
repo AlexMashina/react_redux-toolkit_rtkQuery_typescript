@@ -9,7 +9,7 @@ export const photosApi = createApi({
   }),
   endpoints: (build) => ({
     fetchPhotos: build.query<IPhoto[], any>({
-      query: () => "/photos",
+      query: (page: string = "1") => `/photos?_page=${page}`,
     }),
   }),
 });

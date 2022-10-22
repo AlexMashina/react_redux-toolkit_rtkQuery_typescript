@@ -3,9 +3,6 @@
 .data {
   padding: 20px;
   background-color: $white;
-
-  &__list {
-    list-style: none;
-    padding: 0;
-  }
+  list-style: none;
+  position: relative;
 }

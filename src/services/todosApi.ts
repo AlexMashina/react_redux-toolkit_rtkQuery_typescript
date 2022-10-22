@@ -9,7 +9,7 @@ export const todosApi = createApi({
   }),
   endpoints: (build) => ({
     fetchTodos: build.query<ITodo[], any>({
-      query: () => "/todos",
+      query: (page: string = "1") => `/todos?_page=${page}`,
     }),
   }),
 });

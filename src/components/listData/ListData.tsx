@@ -8,9 +8,5 @@ interface ListDataProps {
 }
 
 export const ListData: FC<ListDataProps> = ({ customClass, children }) => {
-  return (
-    <div className={`${styles.data} ${customClass}`}>
-      <ul className={styles.data__list}>{children}</ul>
-    </div>
-  );
+  return <ul className={`${styles.data} ${customClass}`}>{children}</ul>;
 };
